@@ -1,12 +1,12 @@
 // Helpers
 import { FC, CSSProperties } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useQuery, TypedDocumentNode } from "@apollo/client";
 import { GET_PATIENT } from "../queries/patientsQueries";
 
 // Nested Components
-import { DoubleLeftOutlined } from "@ant-design/icons";
 import { Card, Typography } from "antd";
+import GoHomeButton from "./GoHomeButton";
 
 // AntD styling configuration
 const { Text } = Typography;
@@ -29,10 +29,7 @@ const PatientProfileComp: FC = () => {
 
   return (
     <>
-      <Link to="/">
-        {" "}
-        <DoubleLeftOutlined /> Back to Patients List
-      </Link>
+      <GoHomeButton />
 
       <Card title={`${data.Patient.firstName} ${data.Patient.lastName}`}>
         {/* first Row  */}

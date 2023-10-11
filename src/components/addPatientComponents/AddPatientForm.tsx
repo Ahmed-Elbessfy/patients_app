@@ -1,7 +1,7 @@
 // Helpers
 import { FC } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -11,8 +11,8 @@ import { ADD_PATIENT } from "../../mutations/patientMutations";
 
 // Nested components
 import { Button, Form } from "antd";
-import { DoubleLeftOutlined } from "@ant-design/icons";
 import AddPatientInputs from "./AddPatientInputs";
+import GoHomeButton from "../GoHomeButton";
 
 // Styling configuration
 import { inputStyle } from "./AddPatientFormStyles";
@@ -73,9 +73,7 @@ const AddPatientForm: FC = () => {
 
   return (
     <>
-      <Button ghost>
-        <DoubleLeftOutlined /> <Link to="/">Go back </Link>
-      </Button>
+      <GoHomeButton />
       <h1>Add New Patient</h1>
       <Form
         labelCol={{ span: 5 }}
