@@ -1,10 +1,10 @@
 import { FC } from "react";
-import AddPageForm from "../components/addPatientComponents/AddPatientForm";
+import AddPatientForm from "../components/addPatientComponents/AddPatientForm";
 
 const AddPatientPage: FC = () => {
   return (
     <div>
-      <AddPageForm />
+      <AddPatientForm />
     </div>
   );
 };
