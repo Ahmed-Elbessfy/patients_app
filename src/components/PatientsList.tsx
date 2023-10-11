@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Patient } from "../__generated__/graphql";
 
 // Nested Components
-import { Table } from "antd";
+import { Table, Button } from "antd";
 
 interface PatientsInterface {
   patientsData: Patient[];
@@ -17,6 +17,9 @@ const PatientsList: FC<PatientsInterface> = ({ patientsData }) => {
   return (
     <>
       <h1>Patients List</h1>
+      <Button style={{ marginBottom: "2rem" }}>
+        <Link to="/add_patient">Add New Patient</Link>
+      </Button>
       <Table dataSource={patientsData}>
         <Column
           title="First Name"
