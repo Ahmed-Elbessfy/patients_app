@@ -1,7 +1,12 @@
 import { FC } from "react";
+import AddPageForm from "../components/addPatientComponents/AddPatientForm";
 
 const AddPatientPage: FC = () => {
-  return <div>AddPatientPage</div>;
+  return (
+    <div>
+      <AddPageForm />
+    </div>
+  );
 };
 
 export default AddPatientPage;
