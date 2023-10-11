@@ -6,13 +6,15 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Nested Components
 import PatientsPage from "./views/PatientsPage";
 import PatientProfile from "./views/PatientProfile";
+import AddPatientPage from "./views/AddPatientPage";
 
 const App: FC = () => {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<PatientsPage />} />
-        <Route path="patient/:patient_id" element={<PatientProfile />} />
+        <Route path="/patient/:patient_id" element={<PatientProfile />} />
+        <Route path="/add_patient" element={<AddPatientPage />} />
       </Routes>
     </Router>
   );
