@@ -6,6 +6,7 @@ export const GET_PATIENTS_LIST: TypedDocumentNode = gql`
   query {
     allPatients {
       id
+      key
       firstName
       lastName
       age
