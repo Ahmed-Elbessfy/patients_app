@@ -7,6 +7,7 @@ import { Input, Select } from "antd";
 
 // Styling configuration
 import { errorsStyle, inputStyle, selectStyle } from "./AddPatientFormStyles";
+import { useTranslation } from "react-i18next";
 
 interface AddPatientInputsPropsInterface {
   control: any;
@@ -17,6 +18,8 @@ const AddPatientInputs: FC<AddPatientInputsPropsInterface> = ({
   control,
   errors,
 }) => {
+  // configure i18n 
+  const { t, i18n } = useTranslation("lang");
   return (
     <>
       {/* First Name Input  */}
@@ -24,16 +27,30 @@ const AddPatientInputs: FC<AddPatientInputsPropsInterface> = ({
         name="firstName"
         control={control}
         render={({ field }) => (
-          <Input {...field} style={inputStyle} placeholder="First Name" />
+          <Input
+            {...field}
+            style={{
+              ...inputStyle,
+              textAlign: i18n.language == "ar" ? "right" : "left",
+            }}
+            placeholder={t("formInputs.firstNameInput.text")}
+          />
         )}
       />
       <p style={errorsStyle}>{errors.firstName && errors.firstName.message}</p>
-      {/* Last Name Input  */}
+      {/* Last Name Input */}
       <Controller
         name="lastName"
         control={control}
         render={({ field }) => (
-          <Input {...field} style={inputStyle} placeholder="Last Name" />
+          <Input
+            {...field}
+            style={{
+              ...inputStyle,
+              textAlign: i18n.language == "ar" ? "right" : "left",
+            }}
+            placeholder={t("formInputs.lastNameInput.text")}
+          />
         )}
       />
       <p style={errorsStyle}>{errors.lastName && errors.lastName.message}</p>
@@ -44,9 +61,12 @@ const AddPatientInputs: FC<AddPatientInputsPropsInterface> = ({
         render={({ field }) => (
           <Input
             {...field}
-            style={inputStyle}
+            style={{
+              ...inputStyle,
+              textAlign: i18n.language == "ar" ? "right" : "left",
+            }}
             type="number"
-            placeholder="Age"
+            placeholder={t("formInputs.ageInput.text")}
           />
         )}
       />
@@ -56,9 +76,17 @@ const AddPatientInputs: FC<AddPatientInputsPropsInterface> = ({
         name="gender"
         control={control}
         render={({ field }) => (
-          <Select {...field} style={selectStyle} placeholder="Select Gender">
-            <Select.Option value="male">Male</Select.Option>
-            <Select.Option value="female">Female</Select.Option>
+          <Select
+            {...field}
+            style={selectStyle}
+            placeholder={t("formInputs.genderInput.placeholder")}
+          >
+            <Select.Option value="male">
+              {t("formInputs.genderInput.options.male")}
+            </Select.Option>
+            <Select.Option value="female">
+              {t("formInputs.genderInput.options.female")}
+            </Select.Option>
           </Select>
         )}
       />
@@ -68,7 +96,14 @@ const AddPatientInputs: FC<AddPatientInputsPropsInterface> = ({
         name="phone"
         control={control}
         render={({ field }) => (
-          <Input {...field} style={inputStyle} placeholder="Phone" />
+          <Input
+            {...field}
+            style={{
+              ...inputStyle,
+              textAlign: i18n.language == "ar" ? "right" : "left",
+            }}
+            placeholder={t("formInputs.phoneInput.text")}
+          />
         )}
       />
       <p style={errorsStyle}>{errors.phone && errors.phone.message}</p>
@@ -77,7 +112,14 @@ const AddPatientInputs: FC<AddPatientInputsPropsInterface> = ({
         name="country"
         control={control}
         render={({ field }) => (
-          <Input {...field} style={inputStyle} placeholder="Country" />
+          <Input
+            {...field}
+            style={{
+              ...inputStyle,
+              textAlign: i18n.language == "ar" ? "right" : "left",
+            }}
+            placeholder={t("formInputs.countryInput.text")}
+          />
         )}
       />
       <p style={errorsStyle}>{errors.country && errors.country.message}</p>

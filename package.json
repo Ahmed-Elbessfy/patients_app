@@ -19,10 +19,12 @@
     "apollo-boost": "^0.4.9",
     "graphql": "^16.8.1",
     "graphql-tools": "^9.0.0",
+    "i18next": "^23.5.1",
     "json-graphql-server": "^2.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.47.0",
+    "react-i18next": "^13.2.2",
     "react-router-dom": "^6.16.0",
     "yup": "^1.3.2"
   },

@@ -1,0 +1,41 @@
+{
+  "main": {
+    "formHeader": "أضف مريض جديد"
+  },
+  "formInputs": {
+    "firstNameInput": {
+      "text": "الاسم الأول",
+      "errorText": "برجاء ادخال الأسم الاول"
+    },
+    "lastNameInput": {
+      "text": "الاسم الأخير",
+      "errorText": "برجاء ادخال الأسم الأخير"
+    },
+    "ageInput": {
+      "text": "العمر",
+      "errorText": {
+        "required": "برجاء ادخال العمر",
+        "validation": "العمر يجب أن يكون رقم صحيح موجب"
+      }
+    },
+    "genderInput": {
+      "placeholder": "اختر النوع",
+      "options": {
+        "male": "ذكر",
+        "female": "أنثى"
+      },
+      "errorText": "برجاء تحديد النوع"
+    },
+    "phoneInput": {
+      "text": "رقم الهاتف",
+      "errorText": {
+        "required": "برجاء ادخال رقم الهاتف",
+        "validation": "برجاء ادخال رقم هاتف مصري"
+      }
+    },
+    "countryInput": {
+      "text": "البلد",
+      "errorText": "برجاء ادخال البلد"
+    }
+  }
+}

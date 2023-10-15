@@ -1,0 +1,41 @@
+{
+  "main": {
+    "formHeader": "Add New Patient"
+  },
+  "formInputs": {
+    "firstNameInput": {
+      "text": "First Name",
+      "errorText": "First Name is required"
+    },
+    "lastNameInput": {
+      "text": "Last Name",
+      "errorText": "Last Name is required"
+    },
+    "ageInput": {
+      "text": "Age",
+      "errorText": {
+        "required": "Age is required",
+        "validation": "Age must be a positive and integer"
+      }
+    },
+    "genderInput": {
+      "placeholder": "Select Gender",
+      "options": {
+        "male": "Male",
+        "female": "Female"
+      },
+      "errorText": "Gender is required"
+    },
+    "phoneInput": {
+      "text": "Phone",
+      "errorText": {
+        "required": "Phone is required",
+        "validation": "Please Provide a valid Egyptian mobile phone number"
+      }
+    },
+    "countryInput": {
+      "text": "Country",
+      "errorText": "Country is required"
+    }
+  }
+}
