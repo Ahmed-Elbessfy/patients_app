@@ -1,7 +1,7 @@
 // Helpers
 import { FC } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -26,11 +26,10 @@ interface FormValuesInterface {
   phone: string;
   country: string;
 }
-
-const AddPatientForm: FC = () => {
-  // allow redirecting after submitting new patient data
-  const navigate = useNavigate();
-
+type AddPatientFormProps = {
+  redirect: () => void;
+};
+const AddPatientForm: FC<AddPatientFormProps> = ({ redirect }) => {
   // configure i18n
   const { t, i18n } = useTranslation("lang");
   const switchLanguage = (lang: string) => {
@@ -74,7 +73,7 @@ const AddPatientForm: FC = () => {
     // empty fields
     reset();
     // redirect to home page
-    navigate("/", { replace: true });
+    redirect();
   };
 
   return (
@@ -99,7 +98,13 @@ const AddPatientForm: FC = () => {
         {/* Form Inputs  */}
         <AddPatientInputs control={control} errors={formState.errors} />
         {/* Submit Form Button  */}
-        <Button type="primary" block style={inputStyle} htmlType="submit">
+        <Button
+          type="primary"
+          block
+          style={inputStyle}
+          test-id="submitBtn"
+          htmlType="submit"
+        >
           {t("addPatientFormBtn")}
         </Button>
       </Form>
