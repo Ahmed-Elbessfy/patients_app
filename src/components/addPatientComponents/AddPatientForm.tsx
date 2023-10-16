@@ -100,7 +100,7 @@ const AddPatientForm: FC = () => {
         <AddPatientInputs control={control} errors={formState.errors} />
         {/* Submit Form Button  */}
         <Button type="primary" block style={inputStyle} htmlType="submit">
-          Add Patient
+          {t("addPatientFormBtn")}
         </Button>
       </Form>
     </ConfigProvider>

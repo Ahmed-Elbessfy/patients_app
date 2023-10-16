@@ -37,5 +37,7 @@
       "text": "Country",
       "errorText": "Country is required"
     }
-  }
+  },
+  "addPatientFormBtn": "Add Patient",
+  "goHomeBtnText":"Go back home"
 }
