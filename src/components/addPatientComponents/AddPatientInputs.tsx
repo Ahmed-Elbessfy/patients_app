@@ -18,8 +18,8 @@ const AddPatientInputs: FC<AddPatientInputsPropsInterface> = ({
   control,
   errors,
 }) => {
-  // configure i18n 
-  const { t, i18n } = useTranslation("lang");
+  // configure i18n
+  const { t } = useTranslation("lang");
   return (
     <>
       {/* First Name Input  */}
@@ -29,10 +29,7 @@ const AddPatientInputs: FC<AddPatientInputsPropsInterface> = ({
         render={({ field }) => (
           <Input
             {...field}
-            style={{
-              ...inputStyle,
-              textAlign: i18n.language == "ar" ? "right" : "left",
-            }}
+            style={inputStyle}
             placeholder={t("formInputs.firstNameInput.text")}
           />
         )}
@@ -45,10 +42,7 @@ const AddPatientInputs: FC<AddPatientInputsPropsInterface> = ({
         render={({ field }) => (
           <Input
             {...field}
-            style={{
-              ...inputStyle,
-              textAlign: i18n.language == "ar" ? "right" : "left",
-            }}
+            style={inputStyle}
             placeholder={t("formInputs.lastNameInput.text")}
           />
         )}
@@ -61,10 +55,7 @@ const AddPatientInputs: FC<AddPatientInputsPropsInterface> = ({
         render={({ field }) => (
           <Input
             {...field}
-            style={{
-              ...inputStyle,
-              textAlign: i18n.language == "ar" ? "right" : "left",
-            }}
+            style={inputStyle}
             type="number"
             placeholder={t("formInputs.ageInput.text")}
           />
@@ -98,10 +89,7 @@ const AddPatientInputs: FC<AddPatientInputsPropsInterface> = ({
         render={({ field }) => (
           <Input
             {...field}
-            style={{
-              ...inputStyle,
-              textAlign: i18n.language == "ar" ? "right" : "left",
-            }}
+            style={inputStyle}
             placeholder={t("formInputs.phoneInput.text")}
           />
         )}
@@ -114,10 +102,7 @@ const AddPatientInputs: FC<AddPatientInputsPropsInterface> = ({
         render={({ field }) => (
           <Input
             {...field}
-            style={{
-              ...inputStyle,
-              textAlign: i18n.language == "ar" ? "right" : "left",
-            }}
+            style={inputStyle}
             placeholder={t("formInputs.countryInput.text")}
           />
         )}

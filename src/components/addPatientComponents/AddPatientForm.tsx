@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 import { ADD_PATIENT } from "../../mutations/patientMutations";
 
 // Nested components
-import { Button, Form, Select } from "antd";
+import { Button, Form, Select, ConfigProvider } from "antd";
 import AddPatientInputs from "./AddPatientInputs";
 import GoHomeButton from "../GoHomeButton";
 
@@ -78,7 +78,7 @@ const AddPatientForm: FC = () => {
   };
 
   return (
-    <>
+    <ConfigProvider direction={i18n.language == "ar" ? "rtl" : "ltr"}>
       <GoHomeButton />
       <h1>{t("main.formHeader")}</h1>
       <Select
@@ -103,7 +103,7 @@ const AddPatientForm: FC = () => {
           Add Patient
         </Button>
       </Form>
-    </>
+    </ConfigProvider>
   );
 };
 
